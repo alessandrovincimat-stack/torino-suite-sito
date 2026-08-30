@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
       overlay.classList.add('active');
       setTimeout(function () {
         window.location.href = href;
-      }, 680);
+      }, 1050);
     });
   });
 
