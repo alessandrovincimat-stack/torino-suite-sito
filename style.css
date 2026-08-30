@@ -322,3 +322,8 @@
 .lang-btn.active{ color:var(--bronze-soft); }
 .lang-btn:hover{ color:var(--cream); }
 .lang-sep{ color:rgba(248,244,233,0.3); font-size:11px; }
+
+/* ---------- BRAND / LOGO ---------- */
+.brand{ display:flex !important; align-items:center; gap:11px; }
+.brand-mark{ display:inline-flex; flex-shrink:0; }
+.brand-mark svg{ display:block; }
