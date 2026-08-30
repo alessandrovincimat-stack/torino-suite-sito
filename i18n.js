@@ -182,7 +182,33 @@ window.TS_EN = {
   /* EVENTI — SECTION 06 */
   "eventi.s6.num": "06 — Not to be missed",
   "eventi.s6.title": "The flavours that tell the story of Piedmont.",
-  "eventi.s6.lede": "Whichever restaurant you choose, these are the dishes you shouldn't miss."
+  "eventi.s6.lede": "Whichever restaurant you choose, these are the dishes you shouldn't miss.",
+
+  /* EVENTI — LANDMARK (Mole) */
+  "eventi.landmark.tag": "The symbol of Turin",
+  "eventi.landmark.title": "The Mole Antonelliana.",
+  "eventi.landmark.lede": "Turin's symbol since 1889, today home to the world's tallest museum.",
+  "eventi.landmark.stat1": "World's tallest museum",
+  "eventi.landmark.stat2": "Artifacts at the Egyptian Museum",
+  "eventi.landmark.stat3": "Cars at the Automobile Museum",
+  "eventi.landmark.stat4": "Museums across the city",
+
+  /* EVENTI — SECTION 07 (Musei) */
+  "eventi.s7.num": "07 — Culture",
+  "eventi.s7.title": "The museums not to miss.",
+  "eventi.s7.lede": "From an Egyptian masterpiece second only to Cairo, to the world's tallest museum inside the city's symbol: Turin's cultural offer has few rivals.",
+  "eventi.s7.c1.date": "Via Accademia delle Scienze 6",
+  "eventi.s7.c1.desc": "The world's second most important Egyptian museum after Cairo's, and the oldest ever founded: over 6,500 artifacts including mummies, papyri and sarcophagi.",
+  "eventi.s7.c2.date": "Inside the Mole Antonelliana",
+  "eventi.s7.c2.desc": "The world's tallest museum, inside Turin's symbol: five floors on the history of cinema and a panoramic lift up to the dome.",
+  "eventi.s7.c3.date": "Corso Unità d'Italia 40",
+  "eventi.s7.c3.desc": "Two hundred cars in one of Europe's most spectacular motoring collections.",
+  "eventi.s7.c4.date": "Piazza Castello",
+  "eventi.s7.c4.desc": "A medieval castle and Roman remains hidden behind a Baroque facade by Juvarra.",
+  "eventi.s7.c5.date": "Piazzetta Reale 1",
+  "eventi.s7.c5.desc": "Palazzo Reale, the Royal Armoury, Galleria Sabauda and the Chapel of the Holy Shroud in one great itinerary.",
+  "eventi.s7.c6.date": "Via Magenta 31",
+  "eventi.s7.c6.desc": "One of Italy's most important collections of modern and contemporary art."
 };
 
 document.addEventListener('DOMContentLoaded', function () {
