@@ -256,6 +256,19 @@
   .ri-group ul{ list-style:none; }
   .ri-group li{ font-size:13.5px; line-height:1.9; color:rgba(248,244,233,0.72); padding-left:15px; position:relative; }
   .ri-group li::before{ content:'—'; position:absolute; left:0; color:rgba(217,174,78,0.55); }
+
+  /* ---------- LANGUAGE SWITCH ---------- */
+  .nav-right{ display:flex; align-items:center; gap:30px; }
+  @media(max-width:820px){ .nav-right{ gap:0; } }
+  .lang-switch{ display:flex; align-items:center; gap:7px; }
+  .lang-btn{
+    background:none; border:none; color:rgba(248,244,233,0.5);
+    font-family:'Space Grotesk', sans-serif; font-size:11px; letter-spacing:.1em;
+    cursor:pointer; padding:6px 3px; transition:color .3s; line-height:1;
+  }
+  .lang-btn.active{ color:var(--bronze-soft); }
+  .lang-btn:hover{ color:var(--cream); }
+  .lang-sep{ color:rgba(248,244,233,0.3); font-size:11px; }
 </style>
 </head>
 <body>
@@ -264,12 +277,17 @@
 
 <nav>
   <div class="brand">Torino Suite</div>
-  <div class="navlinks">
-    <a href="#suites">Suite</a>
-    <a href="#location">Posizione</a>
-    <a href="eventi.html" class="story-link" data-label="Torino da Vivere">Torino da Vivere</a>
-    <a href="#faq">FAQ</a>
-    <a href="#contact">Contatti</a>
+  <div class="nav-right">
+    <div class="navlinks">
+      <a href="#suites" data-i18n="nav.suite">Suite</a>
+      <a href="#location" data-i18n="nav.location">Posizione</a>
+      <a href="eventi.html" class="story-link" data-label="Torino da Vivere" data-label-en="Living Torino" data-i18n="nav.living">Torino da Vivere</a>
+      <a href="#faq" data-i18n="nav.faq">FAQ</a>
+      <a href="#contact" data-i18n="nav.contact">Contatti</a>
+    </div>
+    <div class="lang-switch">
+      <button type="button" class="lang-btn active" data-lang="it">IT</button><span class="lang-sep">/</span><button type="button" class="lang-btn" data-lang="en">EN</button>
+    </div>
   </div>
 </nav>
 
@@ -280,25 +298,25 @@
   <div class="hero-bg"></div>
   <div class="eyebrow">Corso Rasselli 1 — Torino</div>
   <h1>
-    <span class="word"><span>Vivi</span></span><br>
+    <span class="word"><span data-i18n="home.hero.live">Vivi</span></span><br>
     <span class="word"><span class="accent">Torino Suite.</span></span>
   </h1>
-  <p class="hero-sub">Un appartamento nel cuore della città. Ingresso privato, stile essenziale, comfort su misura per ogni soggiorno.</p>
-  <div class="scroll-cue"><div class="line"></div>Scorri</div>
+  <p class="hero-sub" data-i18n="home.hero.sub">Un appartamento nel cuore della città. Ingresso privato, stile essenziale, comfort su misura per ogni soggiorno.</p>
+  <div class="scroll-cue"><div class="line"></div><span data-i18n="home.hero.scroll">Scorri</span></div>
 </section>
 
 <!-- INTRO -->
 <section id="intro">
   <div class="section-head reveal">
     <div>
-      <span class="tag">La struttura</span>
-      <h2>Sei alloggi,<br>un'unica accoglienza.</h2>
+      <span class="tag" data-i18n="home.intro.tag">La struttura</span>
+      <h2 data-i18n="home.intro.title">Sei alloggi,<br>un'unica accoglienza.</h2>
     </div>
-    <p class="desc">Torino Suite nasce per chi cerca un soggiorno curato nel cuore della città: appartamenti indipendenti, ognuno con la propria identità cromatica, gestiti con la stessa attenzione artigianale. Cinque unità in Via Carlo Alberto 31 e una in Via Borgone 63, a pochi passi da Porta Nuova, Mole Antonelliana e Piazza San Carlo.</p>
+    <p class="desc" data-i18n="home.intro.desc">Torino Suite nasce per chi cerca un soggiorno curato nel cuore della città: appartamenti indipendenti, ognuno con la propria identità cromatica, gestiti con la stessa attenzione artigianale. Cinque unità in Via Carlo Alberto 31 e una in Via Borgone 63, a pochi passi da Porta Nuova, Mole Antonelliana e Piazza San Carlo.</p>
   </div>
   <div class="intro-stats reveal">
-    <div class="stat"><span class="stat-num">6</span><span class="stat-label">Appartamenti</span></div>
-    <div class="stat"><span class="stat-num">2</span><span class="stat-label">Indirizzi a Torino</span></div>
+    <div class="stat"><span class="stat-num">6</span><span class="stat-label" data-i18n="home.intro.stat1">Appartamenti</span></div>
+    <div class="stat"><span class="stat-num">2</span><span class="stat-label" data-i18n="home.intro.stat2">Indirizzi a Torino</span></div>
   </div>
 </section>
 
@@ -306,10 +324,10 @@
 <section id="suites">
   <div class="section-head reveal">
     <div>
-      <span class="tag">I nostri appartamenti</span>
-      <h2>Sei indirizzi,<br>un solo standard.</h2>
+      <span class="tag" data-i18n="home.suites.tag">I nostri appartamenti</span>
+      <h2 data-i18n="home.suites.title">Sei indirizzi,<br>un solo standard.</h2>
     </div>
-    <p class="desc">Cinque unità in Via Carlo Alberto 31, ciascuna con la propria identità cromatica, più un appartamento in Via Borgone 63.</p>
+    <p class="desc" data-i18n="home.suites.desc">Cinque unità in Via Carlo Alberto 31, ciascuna con la propria identità cromatica, più un appartamento in Via Borgone 63.</p>
   </div>
 
   <div class="apt-block reveal">
@@ -390,46 +408,46 @@
 <section id="dotazioni">
   <div class="section-head reveal">
     <div>
-      <span class="tag">Cosa troverai</span>
-      <h2>Ogni suite, la stessa cura nei dettagli.</h2>
+      <span class="tag" data-i18n="common.roominfo.tag">Cosa troverai</span>
+      <h2 data-i18n="home.roominfo.title">Ogni suite, la stessa cura nei dettagli.</h2>
     </div>
-    <p class="desc">Indipendentemente dall'appartamento che scegli, ogni suite di Torino Suite include gli stessi ambienti curati e le stesse dotazioni, verificate anche dai nostri ospiti su Booking.com.</p>
+    <p class="desc" data-i18n="home.roominfo.desc">Indipendentemente dall'appartamento che scegli, ogni suite di Torino Suite include gli stessi ambienti curati e le stesse dotazioni, verificate anche dai nostri ospiti su Booking.com.</p>
   </div>
   <div class="room-info-grid reveal">
     <div class="ri-group">
-      <h4>Camera</h4>
+      <h4 data-i18n="common.room.bedroom">Camera</h4>
       <ul>
-        <li>Letto matrimoniale</li>
-        <li>Aria condizionata</li>
-        <li>Cassaforte</li>
-        <li>Ferro da stiro</li>
+        <li data-i18n="common.room.bed1">Letto matrimoniale</li>
+        <li data-i18n="common.room.bed2">Aria condizionata</li>
+        <li data-i18n="common.room.bed3">Cassaforte</li>
+        <li data-i18n="common.room.bed4">Ferro da stiro</li>
       </ul>
     </div>
     <div class="ri-group">
-      <h4>Cucina &amp; Soggiorno</h4>
+      <h4 data-i18n="common.room.kitchen">Cucina &amp; Soggiorno</h4>
       <ul>
-        <li>Cucina attrezzata con piano cottura</li>
-        <li>Frigorifero e microonde</li>
-        <li>Macchina del caffè</li>
-        <li>Zona pranzo con tavolo e sedie</li>
+        <li data-i18n="common.room.kit1">Cucina attrezzata con piano cottura</li>
+        <li data-i18n="common.room.kit2">Frigorifero e microonde</li>
+        <li data-i18n="common.room.kit3">Macchina del caffè</li>
+        <li data-i18n="common.room.kit4">Zona pranzo con tavolo e sedie</li>
       </ul>
     </div>
     <div class="ri-group">
-      <h4>Bagno</h4>
+      <h4 data-i18n="common.room.bathroom">Bagno</h4>
       <ul>
-        <li>Bagno privato con bidet</li>
-        <li>Doccia</li>
-        <li>Biancheria e asciugamani inclusi</li>
-        <li>Set di cortesia</li>
+        <li data-i18n="common.room.bath1">Bagno privato con bidet</li>
+        <li data-i18n="common.room.bath2">Doccia</li>
+        <li data-i18n="common.room.bath3">Biancheria e asciugamani inclusi</li>
+        <li data-i18n="common.room.bath4">Set di cortesia</li>
       </ul>
     </div>
     <div class="ri-group">
-      <h4>Servizi</h4>
+      <h4 data-i18n="common.room.services">Servizi</h4>
       <ul>
-        <li>Wi-Fi gratuito</li>
-        <li>TV a schermo piatto</li>
-        <li>Lavatrice, insonorizzazione</li>
-        <li>Check-in autonomo, ascensore nel palazzo</li>
+        <li data-i18n="common.room.serv1">Wi-Fi gratuito</li>
+        <li data-i18n="common.room.serv2">TV a schermo piatto</li>
+        <li data-i18n="common.room.serv3">Lavatrice, insonorizzazione</li>
+        <li data-i18n="home.room.serv4">Check-in autonomo, ascensore nel palazzo</li>
       </ul>
     </div>
   </div>
@@ -439,16 +457,16 @@
 <section id="location">
   <div class="section-head reveal">
     <div>
-      <span class="tag">Posizione</span>
-      <h2>Due indirizzi,<br>due anime di Torino.</h2>
+      <span class="tag" data-i18n="home.location.tag">Posizione</span>
+      <h2 data-i18n="home.location.title">Due indirizzi,<br>due anime di Torino.</h2>
     </div>
-    <p class="desc">Cinque appartamenti nel pieno centro storico, uno immerso nel quartiere residenziale di Pozzo Strada.</p>
+    <p class="desc" data-i18n="home.location.desc">Cinque appartamenti nel pieno centro storico, uno immerso nel quartiere residenziale di Pozzo Strada.</p>
   </div>
 
   <div class="location" style="margin-bottom:80px;">
     <div class="reveal">
-      <span class="tag" style="color:var(--bronze-soft); font-size:12px; letter-spacing:.3em; text-transform:uppercase;">Via Carlo Alberto 31 — 5 appartamenti</span>
-      <h3 style="font-family:'Fraunces',serif; font-weight:400; font-style:italic; font-size:clamp(24px,3.2vw,38px); margin-top:16px; line-height:1.15;">Nel cuore di Torino, tra storia e stazioni.</h3>
+      <span class="tag" style="color:var(--bronze-soft); font-size:12px; letter-spacing:.3em; text-transform:uppercase;" data-i18n="home.location.addr1_tag">Via Carlo Alberto 31 — 5 appartamenti</span>
+      <h3 style="font-family:'Fraunces',serif; font-weight:400; font-style:italic; font-size:clamp(24px,3.2vw,38px); margin-top:16px; line-height:1.15;" data-i18n="home.location.addr1_title">Nel cuore di Torino, tra storia e stazioni.</h3>
       <ul class="loc-list">
         <li><a href="https://www.google.com/maps/dir/?api=1&origin=Via+Carlo+Alberto+31+Torino&destination=Stazione+di+Torino+Porta+Nuova&travelmode=walking" target="_blank" rel="noopener"><span>Stazione Porta Nuova</span><span>700 m</span></a></li>
         <li><a href="https://www.google.com/maps/dir/?api=1&origin=Via+Carlo+Alberto+31+Torino&destination=Mole+Antonelliana+Torino&travelmode=walking" target="_blank" rel="noopener"><span>Mole Antonelliana</span><span>1,1 km</span></a></li>
@@ -468,8 +486,8 @@
 
   <div class="location">
     <div class="reveal">
-      <span class="tag" style="color:var(--bronze-soft); font-size:12px; letter-spacing:.3em; text-transform:uppercase;">Via Borgone 63 — 1 appartamento</span>
-      <h3 style="font-family:'Fraunces',serif; font-weight:400; font-style:italic; font-size:clamp(24px,3.2vw,38px); margin-top:16px; line-height:1.15;">Zona Pozzo Strada, residenziale e comoda.</h3>
+      <span class="tag" style="color:var(--bronze-soft); font-size:12px; letter-spacing:.3em; text-transform:uppercase;" data-i18n="home.location.addr2_tag">Via Borgone 63 — 1 appartamento</span>
+      <h3 style="font-family:'Fraunces',serif; font-weight:400; font-style:italic; font-size:clamp(24px,3.2vw,38px); margin-top:16px; line-height:1.15;" data-i18n="home.location.addr2_title">Zona Pozzo Strada, residenziale e comoda.</h3>
       <ul class="loc-list">
         <li><a href="https://www.google.com/maps/dir/?api=1&origin=Via+Borgone+63+Torino&destination=Fermata+Metro+Monte+Grappa+Torino&travelmode=walking" target="_blank" rel="noopener"><span>Metro Monte Grappa</span><span>~450 m</span></a></li>
         <li><a href="https://www.google.com/maps/dir/?api=1&origin=Via+Borgone+63+Torino&destination=Stazione+di+Torino+Porta+Susa&travelmode=driving" target="_blank" rel="noopener"><span>Stazione Porta Susa</span><span>~3,5 km</span></a></li>
@@ -477,7 +495,7 @@
         <li><a href="https://www.google.com/maps/dir/?api=1&origin=Via+Borgone+63+Torino&destination=Piazza+San+Carlo+Torino&travelmode=driving" target="_blank" rel="noopener"><span>Piazza San Carlo</span><span>~4,5 km</span></a></li>
         <li><a href="https://www.google.com/maps/dir/?api=1&origin=Via+Borgone+63+Torino&destination=Aeroporto+di+Torino+Caselle&travelmode=driving" target="_blank" rel="noopener"><span>Aeroporto di Torino</span><span>~14 km</span></a></li>
       </ul>
-      <p style="margin-top:16px; font-size:12px; color:rgba(248,244,233,0.45);">Distanze indicative — verifica il percorso esatto sulla mappa.</p>
+      <p style="margin-top:16px; font-size:12px; color:rgba(248,244,233,0.45);" data-i18n="home.location.note">Distanze indicative — verifica il percorso esatto sulla mappa.</p>
     </div>
     <div class="map-frame reveal">
       <iframe
@@ -492,28 +510,28 @@
 <!-- FAQ -->
 <section id="faq">
   <div class="section-head reveal">
-    <div><span class="tag">Domande frequenti</span><h2>Tutto quello che<br>ti serve sapere.</h2></div>
+    <div><span class="tag" data-i18n="home.faq.tag">Domande frequenti</span><h2 data-i18n="home.faq.title">Tutto quello che<br>ti serve sapere.</h2></div>
   </div>
   <div class="faq-list reveal">
     <div class="faq-item">
-      <div class="faq-q"><h4>Quali servizi sono inclusi?</h4><span class="plus">+</span></div>
-      <div class="faq-a"><p>Wi-Fi gratuito, aria condizionata, cucina attrezzata (piano cottura, frigorifero, microonde, macchina del caffè, bollitore), cassaforte, TV a schermo piatto, balcone e bagno privato con bidet. Biancheria e asciugamani inclusi.</p></div>
+      <div class="faq-q"><h4 data-i18n="faq.q1">Quali servizi sono inclusi?</h4><span class="plus">+</span></div>
+      <div class="faq-a"><p data-i18n="faq.a1">Wi-Fi gratuito, aria condizionata, cucina attrezzata (piano cottura, frigorifero, microonde, macchina del caffè, bollitore), cassaforte, TV a schermo piatto, balcone e bagno privato con bidet. Biancheria e asciugamani inclusi.</p></div>
     </div>
     <div class="faq-item">
-      <div class="faq-q"><h4>Dove si trova Torino Suite?</h4><span class="plus">+</span></div>
-      <div class="faq-a"><p>In centro a Torino, a circa 700 metri dalla stazione di Porta Nuova. Nelle vicinanze: Mole Antonelliana, Porta Susa e Piazza San Carlo. L'aeroporto dista circa 17 km.</p></div>
+      <div class="faq-q"><h4 data-i18n="faq.q2">Dove si trova Torino Suite?</h4><span class="plus">+</span></div>
+      <div class="faq-a"><p data-i18n="faq.a2">In centro a Torino, a circa 700 metri dalla stazione di Porta Nuova. Nelle vicinanze: Mole Antonelliana, Porta Susa e Piazza San Carlo. L'aeroporto dista circa 17 km.</p></div>
     </div>
     <div class="faq-item">
-      <div class="faq-q"><h4>È disponibile un parcheggio?</h4><span class="plus">+</span></div>
-      <div class="faq-a"><p>Non è presente un parcheggio privato, ma nelle vicinanze è disponibile un parcheggio pubblico a pagamento.</p></div>
+      <div class="faq-q"><h4 data-i18n="faq.q3">È disponibile un parcheggio?</h4><span class="plus">+</span></div>
+      <div class="faq-a"><p data-i18n="faq.a3">Non è presente un parcheggio privato, ma nelle vicinanze è disponibile un parcheggio pubblico a pagamento.</p></div>
     </div>
     <div class="faq-item">
-      <div class="faq-q"><h4>Orari di check-in e check-out?</h4><span class="plus">+</span></div>
-      <div class="faq-a"><p>Check-in dalle 15:00, check-out entro le 11:00. Per orari diversi, contattaci in anticipo: faremo il possibile per venirti incontro.</p></div>
+      <div class="faq-q"><h4 data-i18n="faq.q4">Orari di check-in e check-out?</h4><span class="plus">+</span></div>
+      <div class="faq-a"><p data-i18n="faq.a4">Check-in dalle 15:00, check-out entro le 11:00. Per orari diversi, contattaci in anticipo: faremo il possibile per venirti incontro.</p></div>
     </div>
     <div class="faq-item">
-      <div class="faq-q"><h4>Come posso contattarvi?</h4><span class="plus">+</span></div>
-      <div class="faq-a"><p>Scrivi a torinosuite@gmail.com o chiama/scrivi al +39 348 292 8606.</p></div>
+      <div class="faq-q"><h4 data-i18n="faq.q5">Come posso contattarvi?</h4><span class="plus">+</span></div>
+      <div class="faq-a"><p data-i18n="faq.a5">Scrivi a torinosuite@gmail.com o chiama/scrivi al +39 348 292 8606.</p></div>
     </div>
   </div>
 </section>
@@ -521,37 +539,37 @@
 <!-- LIVING TORINO CTA -->
 <section style="padding:140px 6vw; text-align:center; border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
   <div class="reveal">
-    <span class="tag" style="color:var(--bronze-soft); font-size:12px; letter-spacing:.3em; text-transform:uppercase;">Torino da vivere</span>
-    <h2 style="font-family:'Fraunces',serif; font-weight:400; font-style:italic; font-size:clamp(32px,5.5vw,64px); margin-top:18px; line-height:1.08;">Eventi, tradizioni<br>e i migliori indirizzi in città.</h2>
-    <p class="desc" style="margin:24px auto 0;">Cosa succede a Torino in questi mesi e dove sedersi a tavola, dai grandi classici alle sale più belle della città.</p>
-    <a href="eventi.html" class="story-link cta-btn" data-label="Torino da Vivere">Scopri Torino <span>&rarr;</span></a>
+    <span class="tag" style="color:var(--bronze-soft); font-size:12px; letter-spacing:.3em; text-transform:uppercase;" data-i18n="home.cta.tag">Torino da vivere</span>
+    <h2 style="font-family:'Fraunces',serif; font-weight:400; font-style:italic; font-size:clamp(32px,5.5vw,64px); margin-top:18px; line-height:1.08;" data-i18n="home.cta.title">Eventi, tradizioni<br>e i migliori indirizzi in città.</h2>
+    <p class="desc" style="margin:24px auto 0;" data-i18n="home.cta.desc">Cosa succede a Torino in questi mesi e dove sedersi a tavola, dai grandi classici alle sale più belle della città.</p>
+    <a href="eventi.html" class="story-link cta-btn" data-label="Torino da Vivere" data-label-en="Living Torino"><span data-i18n="home.cta.button">Scopri Torino</span> <span>&rarr;</span></a>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer id="contact">
-  <div class="foot-cta reveal">Pronto a vivere Torino a modo tuo?</div>
+  <div class="foot-cta reveal" data-i18n="common.footer.cta">Pronto a vivere Torino a modo tuo?</div>
   <div class="foot-grid reveal">
     <div class="foot-col">
-      <b>Contatti</b>
+      <b data-i18n="common.footer.contacts">Contatti</b>
       <div>Cristina Piazza</div>
       <div><a href="tel:+393482928606">+39 348 292 8606</a></div>
       <div><a href="mailto:torinosuite@gmail.com">torinosuite@gmail.com</a></div>
     </div>
     <div class="foot-col">
-      <b>Indirizzo</b>
+      <b data-i18n="common.footer.address">Indirizzo</b>
       <div>Corso Rasselli, 1</div>
       <div>10128 Torino, Italia</div>
     </div>
     <div class="foot-col">
-      <b>Link</b>
-      <div><a href="#">Chi siamo</a></div>
-      <div><a href="#">Regolamento</a></div>
-      <div><a href="#">Termini &amp; condizioni</a></div>
-      <div><a href="#">Privacy policy</a></div>
+      <b data-i18n="common.footer.links">Link</b>
+      <div><a href="#" data-i18n="footer.link.about">Chi siamo</a></div>
+      <div><a href="#" data-i18n="footer.link.rules">Regolamento</a></div>
+      <div><a href="#" data-i18n="footer.link.terms">Termini &amp; condizioni</a></div>
+      <div><a href="#" data-i18n="footer.link.privacy">Privacy policy</a></div>
     </div>
   </div>
-  <div class="copyright"><span>© 2026 Torino Suite Srl</span><span>Bozza di redesign — non pubblicato</span></div>
+  <div class="copyright"><span>© 2026 Torino Suite Srl</span><span data-i18n="footer.note.detail">Bozza di redesign — non pubblicato</span></div>
 </footer>
 
 <script>
@@ -573,6 +591,7 @@
   });
 </script>
 
+<script src="i18n.js"></script>
 <script src="transition.js"></script>
 </body>
 </html>

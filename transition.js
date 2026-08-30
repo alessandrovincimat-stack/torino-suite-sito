@@ -13,7 +13,12 @@ document.addEventListener('DOMContentLoaded', function () {
     btn.addEventListener('click', function (e) {
       e.preventDefault();
       var href = btn.getAttribute('href');
+      var lang = 'it';
+      try { lang = localStorage.getItem('ts-lang') || 'it'; } catch (err) {}
       var label = btn.getAttribute('data-label') || '';
+      if (lang === 'en' && btn.getAttribute('data-label-en')) {
+        label = btn.getAttribute('data-label-en');
+      }
       swooshName.textContent = label;
       overlay.classList.add('active');
       setTimeout(function () {

@@ -15,23 +15,28 @@
 
 <nav>
   <a href="index.html" class="brand" style="text-decoration:none; color:var(--cream);">Torino Suite</a>
-  <div class="navlinks">
-    <a href="index.html#suites">Suite</a>
-    <a href="index.html#location">Posizione</a>
-    <a href="eventi.html" class="story-link" data-label="Torino da Vivere">Torino da Vivere</a>
-    <a href="index.html#faq">FAQ</a>
-    <a href="index.html#contact">Contatti</a>
+  <div class="nav-right">
+    <div class="navlinks">
+      <a href="index.html#suites" data-i18n="nav.suite">Suite</a>
+      <a href="index.html#location" data-i18n="nav.location">Posizione</a>
+      <a href="eventi.html" class="story-link" data-label="Torino da Vivere" data-label-en="Living Torino" data-i18n="nav.living">Torino da Vivere</a>
+      <a href="index.html#faq" data-i18n="nav.faq">FAQ</a>
+      <a href="index.html#contact" data-i18n="nav.contact">Contatti</a>
+    </div>
+    <div class="lang-switch">
+      <button type="button" class="lang-btn active" data-lang="it">IT</button><span class="lang-sep">/</span><button type="button" class="lang-btn" data-lang="en">EN</button>
+    </div>
   </div>
 </nav>
 
 <section class="detail-hero">
-  <a href="index.html#suites" class="detail-back">&larr; Torna agli appartamenti</a>
+  <a href="index.html#suites" class="detail-back" data-i18n="detail.back">&larr; Torna agli appartamenti</a>
   <div class="detail-head">
     <span class="detail-dot" style="background:#A47FE0; color:#A47FE0;"></span>
     <h1>Vittorio</h1>
   </div>
   <div class="detail-loc">Via Carlo Alberto 31, Torino</div>
-  <p class="detail-desc">Un tocco di viola e lilla per gli spazi di Vittorio: tonalità morbide, luce naturale e un'atmosfera raccolta, pensata per chi cerca quiete nel cuore di Torino.</p>
+  <p class="detail-desc" data-i18n="apt.vittorio.desc">Un tocco di viola e lilla per gli spazi di Vittorio: tonalità morbide, luce naturale e un'atmosfera raccolta, pensata per chi cerca quiete nel cuore di Torino.</p>
 </section>
 
 <div class="full-gallery">
@@ -40,72 +45,73 @@
 
 <section class="room-info">
   <div class="room-info-head reveal">
-    <span class="tag" style="color:var(--bronze-soft); font-size:12px; letter-spacing:.3em; text-transform:uppercase; display:block; margin-bottom:14px;">Cosa troverai</span>
-    <h3 style="font-family:'Fraunces',serif; font-weight:400; font-style:italic; font-size:clamp(26px,3.2vw,40px);">Ogni ambiente, pensato nei dettagli.</h3>
+    <span class="tag" style="color:var(--bronze-soft); font-size:12px; letter-spacing:.3em; text-transform:uppercase; display:block; margin-bottom:14px;" data-i18n="common.roominfo.tag">Cosa troverai</span>
+    <h3 style="font-family:'Fraunces',serif; font-weight:400; font-style:italic; font-size:clamp(26px,3.2vw,40px);" data-i18n="detail.roominfo.title">Ogni ambiente, pensato nei dettagli.</h3>
   </div>
   <div class="room-info-grid reveal">
     <div class="ri-group">
-      <h4>Camera</h4>
+      <h4 data-i18n="common.room.bedroom">Camera</h4>
       <ul>
-        <li>Letto matrimoniale</li>
-        <li>Aria condizionata</li>
-        <li>Cassaforte</li>
-        <li>Ferro da stiro</li>
+        <li data-i18n="common.room.bed1">Letto matrimoniale</li>
+        <li data-i18n="common.room.bed2">Aria condizionata</li>
+        <li data-i18n="common.room.bed3">Cassaforte</li>
+        <li data-i18n="common.room.bed4">Ferro da stiro</li>
       </ul>
     </div>
     <div class="ri-group">
-      <h4>Cucina &amp; Soggiorno</h4>
+      <h4 data-i18n="common.room.kitchen">Cucina &amp; Soggiorno</h4>
       <ul>
-        <li>Cucina attrezzata con piano cottura</li>
-        <li>Frigorifero e microonde</li>
-        <li>Macchina del caffè</li>
-        <li>Zona pranzo con tavolo e sedie</li>
+        <li data-i18n="common.room.kit1">Cucina attrezzata con piano cottura</li>
+        <li data-i18n="common.room.kit2">Frigorifero e microonde</li>
+        <li data-i18n="common.room.kit3">Macchina del caffè</li>
+        <li data-i18n="common.room.kit4">Zona pranzo con tavolo e sedie</li>
       </ul>
     </div>
     <div class="ri-group">
-      <h4>Bagno</h4>
+      <h4 data-i18n="common.room.bathroom">Bagno</h4>
       <ul>
-        <li>Bagno privato con bidet</li>
-        <li>Doccia</li>
-        <li>Biancheria e asciugamani inclusi</li>
-        <li>Set di cortesia</li>
+        <li data-i18n="common.room.bath1">Bagno privato con bidet</li>
+        <li data-i18n="common.room.bath2">Doccia</li>
+        <li data-i18n="common.room.bath3">Biancheria e asciugamani inclusi</li>
+        <li data-i18n="common.room.bath4">Set di cortesia</li>
       </ul>
     </div>
     <div class="ri-group">
-      <h4>Servizi</h4>
+      <h4 data-i18n="common.room.services">Servizi</h4>
       <ul>
-        <li>Wi-Fi gratuito</li>
-        <li>TV a schermo piatto</li>
-        <li>Lavatrice, insonorizzazione</li>
-        <li>Check-in autonomo, ascensore</li>
+        <li data-i18n="common.room.serv1">Wi-Fi gratuito</li>
+        <li data-i18n="common.room.serv2">TV a schermo piatto</li>
+        <li data-i18n="common.room.serv3">Lavatrice, insonorizzazione</li>
+        <li data-i18n="detail.room.serv4">Check-in autonomo, ascensore</li>
       </ul>
     </div>
   </div>
 </section>
 
 <footer id="contact">
-  <div class="foot-cta">Pronto a vivere Torino a modo tuo?</div>
+  <div class="foot-cta" data-i18n="common.footer.cta">Pronto a vivere Torino a modo tuo?</div>
   <div class="foot-grid">
     <div class="foot-col">
-      <b>Contatti</b>
+      <b data-i18n="common.footer.contacts">Contatti</b>
       <div>Cristina Piazza</div>
       <div><a href="tel:+393482928606">+39 348 292 8606</a></div>
       <div><a href="mailto:torinosuite@gmail.com">torinosuite@gmail.com</a></div>
     </div>
     <div class="foot-col">
-      <b>Indirizzo</b>
+      <b data-i18n="common.footer.address">Indirizzo</b>
       <div>Corso Rasselli, 1</div>
       <div>10128 Torino, Italia</div>
     </div>
     <div class="foot-col">
-      <b>Link</b>
-      <div><a href="index.html">Home</a></div>
-      <div><a href="index.html#faq">FAQ</a></div>
+      <b data-i18n="common.footer.links">Link</b>
+      <div><a href="index.html" data-i18n="common.footer.home">Home</a></div>
+      <div><a href="index.html#faq" data-i18n="common.footer.faq">FAQ</a></div>
     </div>
   </div>
-  <div class="copyright"><span>© 2026 Torino Suite Srl</span><span>Bozza di redesign — non pubblicato</span></div>
+  <div class="copyright"><span>© 2026 Torino Suite Srl</span><span data-i18n="footer.note.detail">Bozza di redesign — non pubblicato</span></div>
 </footer>
 
+<script src="i18n.js"></script>
 <script src="transition.js"></script>
 </body>
 </html>
