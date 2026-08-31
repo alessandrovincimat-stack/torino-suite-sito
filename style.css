@@ -322,8 +322,9 @@
 }
 .lang-toggle:hover{ color:var(--cream); }
 .lang-flag{ font-size:14px; line-height:1; }
-.lang-caret{ font-size:9px; color:rgba(248,244,233,0.45); transition:transform .25s; }
+.lang-caret{ color:rgba(248,244,233,0.5); transition:transform .25s, color .25s; display:inline-block; flex-shrink:0; }
 .lang-switch.open .lang-caret{ transform:rotate(180deg); }
+.lang-toggle:hover .lang-caret, .lang-switch.open .lang-caret{ color:var(--bronze-soft); }
 .lang-menu{
   position:absolute; top:calc(100% + 14px); right:0; min-width:168px;
   background:#0c0c0c; border:1px solid var(--line);
