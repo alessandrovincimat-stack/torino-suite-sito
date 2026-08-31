@@ -375,6 +375,17 @@
     transition:background .3s, color .3s;
   }
   .nav-cta:hover{ background:var(--bronze); color:var(--ink) !important; }
+
+  .hero-book-cta{
+    position:relative; z-index:2;
+    display:inline-flex; align-items:center; gap:10px; margin-top:34px;
+    padding:16px 34px; background:var(--bronze); color:var(--ink);
+    border-radius:999px; text-decoration:none; font-weight:600;
+    font-size:12px; letter-spacing:.14em; text-transform:uppercase;
+    box-shadow:0 8px 30px rgba(217,174,78,0.25);
+    transition:transform .3s, box-shadow .3s, background .3s;
+  }
+  .hero-book-cta:hover{ transform:translateY(-2px); box-shadow:0 12px 40px rgba(217,174,78,0.4); background:var(--bronze-soft); }
 </style>
 </head>
 <body>
@@ -449,7 +460,24 @@
     <span class="word"><span class="accent">Torino Suite</span></span>
   </h1>
   <p class="hero-sub" data-i18n="home.hero.sub">Un appartamento nel cuore della città. Ingresso privato, stile essenziale, comfort su misura per ogni soggiorno.</p>
+  <a href="#prenota" class="hero-book-cta" data-i18n="home.hero.checkavail">Verifica disponibilità &amp; tariffe</a>
   <div class="scroll-cue"><div class="line"></div><span data-i18n="home.hero.scroll">Scorri</span></div>
+</section>
+
+<!-- PRENOTA -->
+<section id="prenota">
+  <div class="section-head reveal">
+    <div>
+      <span class="tag" data-i18n="home.booking.tag">Prenota</span>
+      <h2 data-i18n="home.booking.title">Verifica disponibilità<br>e tariffe in tempo reale.</h2>
+    </div>
+    <p class="desc" data-i18n="home.booking.desc">Scegli le date, l'appartamento e completa la prenotazione in autonomia — calendario e pagamento sicuro gestiti direttamente da noi.</p>
+  </div>
+  <div class="booking-widget-wrap reveal">
+    <div id="apartmentIframeAll"></div>
+    <script type="text/javascript" src="https://login.smoobu.com/js/Settings/BookingToolIframe.js"></script>
+    <script>BookingToolIframe.initialize({"url": "https://login.smoobu.com/it/booking-tool/iframe/362608", "baseUrl": "https://login.smoobu.com", "target": "#apartmentIframeAll"})</script>
+  </div>
 </section>
 
 <!-- INTRO -->
@@ -647,22 +675,6 @@
         loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mappa Via Borgone 63">
       </iframe>
     </div>
-  </div>
-</section>
-
-<!-- PRENOTA -->
-<section id="prenota">
-  <div class="section-head reveal">
-    <div>
-      <span class="tag" data-i18n="home.booking.tag">Prenota</span>
-      <h2 data-i18n="home.booking.title">Verifica disponibilità<br>e tariffe in tempo reale.</h2>
-    </div>
-    <p class="desc" data-i18n="home.booking.desc">Scegli le date, l'appartamento e completa la prenotazione in autonomia — calendario e pagamento sicuro gestiti direttamente da noi.</p>
-  </div>
-  <div class="booking-widget-wrap reveal">
-    <div id="apartmentIframeAll"></div>
-    <script type="text/javascript" src="https://login.smoobu.com/js/Settings/BookingToolIframe.js"></script>
-    <script>BookingToolIframe.initialize({"url": "https://login.smoobu.com/it/booking-tool/iframe/362608", "baseUrl": "https://login.smoobu.com", "target": "#apartmentIframeAll"})</script>
   </div>
 </section>
 
