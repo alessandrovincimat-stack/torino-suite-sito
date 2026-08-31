@@ -23,8 +23,17 @@
       <a href="index.html#faq" data-i18n="nav.faq">FAQ</a>
       <a href="index.html#contact" data-i18n="nav.contact">Contatti</a>
     </div>
-    <div class="lang-switch">
-      <button type="button" class="lang-btn active" data-lang="it">IT</button><span class="lang-sep">/</span><button type="button" class="lang-btn" data-lang="en">EN</button>
+    <div class="lang-switch" id="langSwitch">
+      <button type="button" class="lang-toggle" id="langToggle">
+        <span class="lang-flag">🇮🇹</span><span class="lang-code">IT</span><span class="lang-caret">&#9662;</span>
+      </button>
+      <div class="lang-menu">
+        <button type="button" class="lang-option active" data-lang="it"><span class="lang-flag">🇮🇹</span>Italiano</button>
+        <button type="button" class="lang-option" data-lang="en"><span class="lang-flag">🇬🇧</span>English</button>
+        <button type="button" class="lang-option" data-lang="fr"><span class="lang-flag">🇫🇷</span>Français</button>
+        <button type="button" class="lang-option" data-lang="de"><span class="lang-flag">🇩🇪</span>Deutsch</button>
+        <button type="button" class="lang-option" data-lang="zh"><span class="lang-flag">🇨🇳</span>中文</button>
+      </div>
     </div>
   </div>
 </nav>
