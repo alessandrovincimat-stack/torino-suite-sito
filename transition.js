@@ -79,5 +79,53 @@ document.addEventListener('DOMContentLoaded', function () {
     track.addEventListener('click', function (e) {
       if (moved) { e.preventDefault(); e.stopPropagation(); }
     }, true);
+
+    // ---- avanzamento automatico ogni 7s, in pausa durante il drag/hover ----
+    var autoTimer = null;
+    function scrollToNextCard() {
+      var card = track.querySelector('.apt-card');
+      if (!card) return;
+      var step = card.offsetWidth + 20; // width + gap
+      var atEnd = track.scrollLeft + track.clientWidth >= track.scrollWidth - 4;
+      track.scrollTo({ left: atEnd ? 0 : track.scrollLeft + step, behavior: 'smooth' });
+    }
+    function startAuto() {
+      stopAuto();
+      autoTimer = setInterval(scrollToNextCard, 7000);
+    }
+    function stopAuto() {
+      if (autoTimer) { clearInterval(autoTimer); autoTimer = null; }
+    }
+    track.addEventListener('mouseenter', stopAuto);
+    track.addEventListener('mouseleave', startAuto);
+    track.addEventListener('touchstart', stopAuto, { passive: true });
+    startAuto();
+
+    // ---- frecce avanti/indietro ----
+    var wrap = track.closest('.apt-carousel-wrap');
+    if (wrap) {
+      wrap.querySelectorAll('.apt-nav-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          stopAuto();
+          var card = track.querySelector('.apt-card');
+          var step = card ? card.offsetWidth + 20 : 320;
+          var dir = parseInt(btn.getAttribute('data-dir'), 10);
+          track.scrollBy({ left: step * dir, behavior: 'smooth' });
+          startAuto();
+        });
+      });
+    }
+  });
+
+  /* ---- Rotazione foto nelle card alloggi ogni 5s ---- */
+  document.querySelectorAll('.apt-card-photo').forEach(function (photoBox) {
+    var imgs = photoBox.querySelectorAll('img');
+    if (imgs.length < 2) return;
+    var i = 0;
+    setInterval(function () {
+      imgs[i].classList.remove('active');
+      i = (i + 1) % imgs.length;
+      imgs[i].classList.add('active');
+    }, 5000);
   });
 });
