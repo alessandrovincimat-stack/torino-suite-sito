@@ -321,6 +321,23 @@
   }
   .apt-nav-btn:hover{ border-color:var(--bronze); color:var(--bronze-soft); background:rgba(217,174,78,0.06); }
   @media(max-width:600px){ .apt-card{ flex-basis:78vw; } }
+
+  /* ---------- HERO SIDE SYMBOLS (Torino) ---------- */
+  .hero-icons{
+    position:absolute; top:0; bottom:0; z-index:2;
+    display:flex; flex-direction:column; align-items:center; justify-content:center; gap:70px;
+    pointer-events:none;
+  }
+  .hero-icons-left{ left:4vw; }
+  .hero-icons-right{ right:4vw; }
+  .hero-symbol{
+    width:34px; height:34px; opacity:0.4;
+  }
+  .hero-icons-right .hero-symbol:first-child{ width:26px; height:44px; }
+  .hero-symbol path, .hero-symbol line, .hero-symbol polyline, .hero-symbol rect{
+    fill:none; stroke:#d9ae4e; stroke-width:1.3; stroke-linejoin:round; stroke-linecap:round;
+  }
+  @media(max-width:900px){ .hero-icons{ display:none; } }
 </style>
 </head>
 <body>
@@ -348,10 +365,37 @@
 <!-- HERO -->
 <section class="hero" id="hero">
   <div class="hero-bg"></div>
+  <div class="hero-icons hero-icons-left">
+    <svg class="hero-symbol" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><!-- Toro (corna) -->
+      <path d="M30 46c0-8 0-14-2-19-3-8-9-12-13-12-2 0-3 1-3 3 0 6 6 10 11 11"/>
+      <path d="M30 46c0-8 0-14 2-19 3-8 9-12 13-12 2 0 3 1 3 3 0 6-6 10-11 11"/>
+      <circle cx="30" cy="46" r="1.4" fill="#d9ae4e" stroke="none"/>
+    </svg>
+    <svg class="hero-symbol" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><!-- Stella -->
+      <path d="M30 8 L34.5 24 L51 24 L37.5 33.5 L42 50 L30 40 L18 50 L22.5 33.5 L9 24 L25.5 24 Z"/>
+    </svg>
+  </div>
+  <div class="hero-icons hero-icons-right">
+    <svg class="hero-symbol" viewBox="0 0 60 100" xmlns="http://www.w3.org/2000/svg"><!-- Mole -->
+      <rect x="10" y="66" width="40" height="26"/>
+      <line x1="17" y1="66" x2="17" y2="92"/>
+      <line x1="24" y1="66" x2="24" y2="92"/>
+      <line x1="31" y1="66" x2="31" y2="92"/>
+      <line x1="38" y1="66" x2="38" y2="92"/>
+      <line x1="45" y1="66" x2="45" y2="92"/>
+      <polyline points="10,66 18,54 42,54 50,66"/>
+      <polyline points="18,54 22,44 38,44 42,54"/>
+      <polyline points="22,44 26,34 34,34 38,44"/>
+      <polyline points="26,34 30,4 34,34"/>
+    </svg>
+    <svg class="hero-symbol" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><!-- Giglio Sabaudo -->
+      <path d="M30 10c-3 4-3 9 0 13-3-1-8-1-10 2-2 3-1 7 2 9-3 1-5 4-5 7 3 0 6-1 8-3-1 3-1 6 1 8h8c2-2 2-5 1-8 2 2 5 3 8 3 0-3-2-6-5-7 3-2 4-6 2-9-2-3-7-3-10-2 3-4 3-9 0-13z"/>
+    </svg>
+  </div>
   <div class="eyebrow">Corso Rasselli 1 — Torino</div>
   <h1>
     <span class="word"><span data-i18n="home.hero.live">Vivi</span></span><br>
-    <span class="word"><span class="accent">Torino Suite.</span></span>
+    <span class="word"><span class="accent">Torino Suite</span></span>
   </h1>
   <p class="hero-sub" data-i18n="home.hero.sub">Un appartamento nel cuore della città. Ingresso privato, stile essenziale, comfort su misura per ogni soggiorno.</p>
   <div class="scroll-cue"><div class="line"></div><span data-i18n="home.hero.scroll">Scorri</span></div>
