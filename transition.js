@@ -110,7 +110,15 @@ document.addEventListener('DOMContentLoaded', function () {
           var card = track.querySelector('.apt-card');
           var step = card ? card.offsetWidth + 20 : 320;
           var dir = parseInt(btn.getAttribute('data-dir'), 10);
-          track.scrollBy({ left: step * dir, behavior: 'smooth' });
+          var atEnd = track.scrollLeft + track.clientWidth >= track.scrollWidth - 4;
+          var atStart = track.scrollLeft <= 4;
+          if (dir > 0 && atEnd) {
+            track.scrollTo({ left: 0, behavior: 'smooth' });
+          } else if (dir < 0 && atStart) {
+            track.scrollTo({ left: track.scrollWidth, behavior: 'smooth' });
+          } else {
+            track.scrollBy({ left: step * dir, behavior: 'smooth' });
+          }
           startAuto();
         });
       });
