@@ -44,4 +44,40 @@ document.addEventListener('DOMContentLoaded', function () {
     }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
     targets.forEach(function (el) { io.observe(el); });
   }
+
+  /* ---- Carosello alloggi trascinabile (stile Red Bull) ---- */
+  document.querySelectorAll('.apt-carousel').forEach(function (track) {
+    var isDown = false, startX = 0, startScroll = 0, moved = false;
+
+    function pointerDown(e) {
+      isDown = true;
+      moved = false;
+      track.classList.add('dragging');
+      startX = (e.touches ? e.touches[0].pageX : e.pageX);
+      startScroll = track.scrollLeft;
+    }
+    function pointerMove(e) {
+      if (!isDown) return;
+      var x = (e.touches ? e.touches[0].pageX : e.pageX);
+      var delta = x - startX;
+      if (Math.abs(delta) > 4) moved = true;
+      track.scrollLeft = startScroll - delta;
+      if (!e.touches) e.preventDefault();
+    }
+    function pointerUp() {
+      isDown = false;
+      track.classList.remove('dragging');
+    }
+
+    track.addEventListener('mousedown', pointerDown);
+    window.addEventListener('mousemove', pointerMove);
+    window.addEventListener('mouseup', pointerUp);
+    track.addEventListener('touchstart', pointerDown, { passive: true });
+    track.addEventListener('touchmove', pointerMove, { passive: true });
+    track.addEventListener('touchend', pointerUp);
+
+    track.addEventListener('click', function (e) {
+      if (moved) { e.preventDefault(); e.stopPropagation(); }
+    }, true);
+  });
 });
