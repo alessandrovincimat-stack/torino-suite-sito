@@ -1,7 +1,7 @@
 /* Torino Suite — motore di traduzione multilingua (IT / EN / FR / DE / ZH) */
 
 window.TS_EN = {
-  "nav.suite": "Suites", "nav.location": "Location", "nav.living": "Living Torino", "nav.faq": "FAQ", "nav.contact": "Contact",
+  "nav.suite": "Suites", "nav.location": "Location", "nav.living": "Living Torino", "nav.faq": "FAQ", "nav.contact": "Contact", "nav.book": "Book Now",
   "detail.back": "&larr; Back to apartments", "eventi.back": "&larr; Back to home",
   "home.hero.live": "Live",
   "home.hero.sub": "An apartment in the heart of the city. Private entrance, essential style, comfort tailored to every stay.",
@@ -50,6 +50,7 @@ window.TS_EN = {
   "home.cta.button": "Discover Turin",
   "common.footer.cta": "Ready to experience Turin your way?",
   "common.footer.contacts": "Contact", "common.footer.address": "Address", "common.footer.links": "Links", "common.footer.home": "Home", "common.footer.faq": "FAQ",
+  "home.booking.tag": "Book now", "home.booking.title": "Check availability<br>and rates in real time.", "home.booking.desc": "Choose your dates and apartment and complete your booking directly — secure calendar and payment.",
   "footer.note.detail": "Redesign draft — not yet published",
   "footer.note.eventi": "Events and venues listed for informational purposes — always check dates and availability",
   "footer.link.about": "About us", "footer.link.rules": "House rules", "footer.link.terms": "Terms &amp; conditions", "footer.link.privacy": "Privacy policy",
@@ -117,7 +118,7 @@ window.TS_EN = {
 };
 
 window.TS_FR = {
-  "nav.suite": "Suites", "nav.location": "Lieu", "nav.living": "Vivre Turin", "nav.faq": "FAQ", "nav.contact": "Contact",
+  "nav.suite": "Suites", "nav.location": "Lieu", "nav.living": "Vivre Turin", "nav.faq": "FAQ", "nav.contact": "Contact", "nav.book": "Réserver",
   "detail.back": "&larr; Retour aux appartements", "eventi.back": "&larr; Retour à l'accueil",
   "home.hero.live": "Vivez",
   "home.hero.sub": "Un appartement au cœur de la ville. Entrée privée, style essentiel, confort sur mesure pour chaque séjour.",
@@ -166,6 +167,7 @@ window.TS_FR = {
   "home.cta.button": "Découvrir Turin",
   "common.footer.cta": "Prêt à vivre Turin à votre façon ?",
   "common.footer.contacts": "Contact", "common.footer.address": "Adresse", "common.footer.links": "Liens", "common.footer.home": "Accueil", "common.footer.faq": "FAQ",
+  "home.booking.tag": "Réserver", "home.booking.title": "Vérifiez les disponibilités<br>et les tarifs en temps réel.", "home.booking.desc": "Choisissez vos dates et votre appartement et finalisez votre réservation directement — calendrier et paiement sécurisés.",
   "footer.note.detail": "Ébauche de refonte — non encore publiée",
   "footer.note.eventi": "Événements et lieux indiqués à titre informatif — vérifiez toujours les dates et disponibilités",
   "footer.link.about": "À propos", "footer.link.rules": "Règlement intérieur", "footer.link.terms": "Conditions générales", "footer.link.privacy": "Politique de confidentialité",
@@ -233,7 +235,7 @@ window.TS_FR = {
 };
 
 window.TS_DE = {
-  "nav.suite": "Suiten", "nav.location": "Lage", "nav.living": "Turin erleben", "nav.faq": "FAQ", "nav.contact": "Kontakt",
+  "nav.suite": "Suiten", "nav.location": "Lage", "nav.living": "Turin erleben", "nav.faq": "FAQ", "nav.contact": "Kontakt", "nav.book": "Jetzt buchen",
   "detail.back": "&larr; Zurück zu den Apartments", "eventi.back": "&larr; Zurück zur Startseite",
   "home.hero.live": "Erleben Sie",
   "home.hero.sub": "Eine Wohnung im Herzen der Stadt. Privater Eingang, klarer Stil, maßgeschneiderter Komfort für jeden Aufenthalt.",
@@ -282,6 +284,7 @@ window.TS_DE = {
   "home.cta.button": "Turin entdecken",
   "common.footer.cta": "Bereit, Turin auf Ihre Art zu erleben?",
   "common.footer.contacts": "Kontakt", "common.footer.address": "Adresse", "common.footer.links": "Links", "common.footer.home": "Startseite", "common.footer.faq": "FAQ",
+  "home.booking.tag": "Jetzt buchen", "home.booking.title": "Verfügbarkeit und Preise<br>in Echtzeit prüfen.", "home.booking.desc": "Wählen Sie Ihre Daten und Ihr Apartment und schließen Sie Ihre Buchung direkt ab — sicherer Kalender und sichere Zahlung.",
   "footer.note.detail": "Redesign-Entwurf — noch nicht veröffentlicht",
   "footer.note.eventi": "Veranstaltungen und Lokale dienen nur zur Information — Daten und Verfügbarkeit bitte immer prüfen",
   "footer.link.about": "Über uns", "footer.link.rules": "Hausordnung", "footer.link.terms": "Allgemeine Geschäftsbedingungen", "footer.link.privacy": "Datenschutz",
@@ -349,7 +352,7 @@ window.TS_DE = {
 };
 
 window.TS_ZH = {
-  "nav.suite": "公寓", "nav.location": "位置", "nav.living": "都灵生活", "nav.faq": "常见问题", "nav.contact": "联系方式",
+  "nav.suite": "公寓", "nav.location": "位置", "nav.living": "都灵生活", "nav.faq": "常见问题", "nav.contact": "联系方式", "nav.book": "立即预订",
   "detail.back": "&larr; 返回公寓列表", "eventi.back": "&larr; 返回首页",
   "home.hero.live": "入住",
   "home.hero.sub": "位于市中心的公寓。私人入口，简约风格，为每次入住量身定制的舒适体验。",
@@ -398,6 +401,7 @@ window.TS_ZH = {
   "home.cta.button": "探索都灵",
   "common.footer.cta": "准备好以你的方式体验都灵了吗？",
   "common.footer.contacts": "联系方式", "common.footer.address": "地址", "common.footer.links": "链接", "common.footer.home": "首页", "common.footer.faq": "常见问题",
+  "home.booking.tag": "立即预订", "home.booking.title": "实时查看空房<br>与每日房价。", "home.booking.desc": "选择日期和公寓，直接在线完成预订——安全的日历与支付系统。",
   "footer.note.detail": "改版草案 — 尚未正式发布",
   "footer.note.eventi": "以上活动和场所信息仅供参考 — 请务必核实具体日期与开放情况",
   "footer.link.about": "关于我们", "footer.link.rules": "入住须知", "footer.link.terms": "条款与条件", "footer.link.privacy": "隐私政策",

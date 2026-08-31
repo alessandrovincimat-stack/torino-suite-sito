@@ -361,6 +361,20 @@
     fill:none; stroke:#d9ae4e; stroke-width:1.3; stroke-linejoin:round; stroke-linecap:round;
   }
   @media(max-width:900px){ .hero-icons{ display:none; } }
+
+  /* ---------- PRENOTA (Smoobu widget) ---------- */
+  .booking-widget-wrap{
+    background:#0e0e0e; border:1px solid var(--line); border-radius:4px;
+    padding:20px; min-height:480px;
+  }
+  .nav-cta{
+    display:inline-flex; align-items:center; padding:9px 20px;
+    border:1px solid var(--bronze); border-radius:999px;
+    color:var(--cream) !important; text-decoration:none;
+    font-size:11px; letter-spacing:.12em; text-transform:uppercase;
+    transition:background .3s, color .3s;
+  }
+  .nav-cta:hover{ background:var(--bronze); color:var(--ink) !important; }
 </style>
 </head>
 <body>
@@ -376,6 +390,7 @@
       <a href="eventi.html" class="story-link" data-label="Torino da Vivere" data-label-en="Living Torino" data-i18n="nav.living">Torino da Vivere</a>
       <a href="#faq" data-i18n="nav.faq">FAQ</a>
       <a href="#contact" data-i18n="nav.contact">Contatti</a>
+      <a href="#prenota" class="nav-cta" data-i18n="nav.book">Prenota</a>
     </div>
     <div class="lang-switch" id="langSwitch">
       <button type="button" class="lang-toggle" id="langToggle">
@@ -632,6 +647,22 @@
         loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mappa Via Borgone 63">
       </iframe>
     </div>
+  </div>
+</section>
+
+<!-- PRENOTA -->
+<section id="prenota">
+  <div class="section-head reveal">
+    <div>
+      <span class="tag" data-i18n="home.booking.tag">Prenota</span>
+      <h2 data-i18n="home.booking.title">Verifica disponibilità<br>e tariffe in tempo reale.</h2>
+    </div>
+    <p class="desc" data-i18n="home.booking.desc">Scegli le date, l'appartamento e completa la prenotazione in autonomia — calendario e pagamento sicuro gestiti direttamente da noi.</p>
+  </div>
+  <div class="booking-widget-wrap reveal">
+    <div id="apartmentIframeAll"></div>
+    <script type="text/javascript" src="https://login.smoobu.com/js/Settings/BookingToolIframe.js"></script>
+    <script>BookingToolIframe.initialize({"url": "https://login.smoobu.com/it/booking-tool/iframe/362608", "baseUrl": "https://login.smoobu.com", "target": "#apartmentIframeAll"})</script>
   </div>
 </section>
 

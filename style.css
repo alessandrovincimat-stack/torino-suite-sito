@@ -413,3 +413,17 @@
 }
 .apt-nav-btn:hover{ border-color:var(--bronze); color:var(--bronze-soft); background:rgba(217,174,78,0.06); }
 @media(max-width:600px){ .apt-card{ flex-basis:78vw; } }
+
+/* ---------- PRENOTA (Smoobu widget) ---------- */
+.booking-widget-wrap{
+  background:#0e0e0e; border:1px solid var(--line); border-radius:4px;
+  padding:20px; min-height:480px;
+}
+.nav-cta{
+  display:inline-flex; align-items:center; padding:9px 20px;
+  border:1px solid var(--bronze); border-radius:999px;
+  color:var(--cream) !important; text-decoration:none;
+  font-size:11px; letter-spacing:.12em; text-transform:uppercase;
+  transition:background .3s, color .3s;
+}
+.nav-cta:hover{ background:var(--bronze); color:var(--ink) !important; }
