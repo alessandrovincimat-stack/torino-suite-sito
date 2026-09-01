@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var consent = null;
     try { consent = localStorage.getItem('ts-cookie-consent'); } catch (e) {}
     if (!consent) {
-      setTimeout(function () { cookieBanner.classList.add('visible'); }, 600);
+      cookieBanner.classList.add('visible');
     }
     var acceptBtn = document.getElementById('cookieAccept');
     if (acceptBtn) {
