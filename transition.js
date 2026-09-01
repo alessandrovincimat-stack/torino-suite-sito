@@ -136,4 +136,44 @@ document.addEventListener('DOMContentLoaded', function () {
       imgs[i].classList.add('active');
     }, 5000);
   });
+
+  /* ---- Menu capitoli (Torino da Vivere) ---- */
+  var chaptersToggle = document.getElementById('chaptersToggle');
+  var chaptersPanel = document.getElementById('chaptersPanel');
+  if (chaptersToggle && chaptersPanel) {
+    chaptersToggle.addEventListener('click', function (e) {
+      e.stopPropagation();
+      chaptersToggle.classList.toggle('open');
+      chaptersPanel.classList.toggle('open');
+    });
+    chaptersPanel.querySelectorAll('.chapters-link').forEach(function (link) {
+      link.addEventListener('click', function () {
+        chaptersToggle.classList.remove('open');
+        chaptersPanel.classList.remove('open');
+      });
+    });
+    document.addEventListener('click', function (e) {
+      if (!chaptersPanel.contains(e.target) && !chaptersToggle.contains(e.target)) {
+        chaptersToggle.classList.remove('open');
+        chaptersPanel.classList.remove('open');
+      }
+    });
+  }
+
+  /* ---- Cookie banner ---- */
+  var cookieBanner = document.getElementById('cookieBanner');
+  if (cookieBanner) {
+    var consent = null;
+    try { consent = localStorage.getItem('ts-cookie-consent'); } catch (e) {}
+    if (!consent) {
+      setTimeout(function () { cookieBanner.classList.add('visible'); }, 600);
+    }
+    var acceptBtn = document.getElementById('cookieAccept');
+    if (acceptBtn) {
+      acceptBtn.addEventListener('click', function () {
+        cookieBanner.classList.remove('visible');
+        try { localStorage.setItem('ts-cookie-consent', 'accepted'); } catch (e) {}
+      });
+    }
+  }
 });

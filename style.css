@@ -438,3 +438,65 @@
   transition:transform .3s, box-shadow .3s, background .3s;
 }
 .hero-book-cta:hover{ transform:translateY(-2px); box-shadow:0 12px 40px rgba(217,174,78,0.4); background:var(--bronze-soft); }
+
+/* ---------- CHAPTERS MENU (Torino da Vivere) ---------- */
+.chapters-toggle{
+  position:fixed; bottom:32px; right:32px; z-index:150;
+  width:52px; height:52px; border-radius:50%;
+  background:#0c0c0c; border:1px solid var(--line);
+  display:flex; flex-direction:column; align-items:center; justify-content:center; gap:5px;
+  cursor:pointer; box-shadow:0 10px 30px rgba(0,0,0,0.5);
+  transition:border-color .3s, transform .3s;
+}
+.chapters-toggle:hover{ border-color:var(--bronze); transform:translateY(-2px); }
+.chapters-toggle span{ width:18px; height:1px; background:var(--bronze-soft); transition:transform .3s, opacity .3s; }
+.chapters-toggle.open span:nth-child(1){ transform:translateY(6px) rotate(45deg); }
+.chapters-toggle.open span:nth-child(2){ opacity:0; }
+.chapters-toggle.open span:nth-child(3){ transform:translateY(-6px) rotate(-45deg); }
+
+.chapters-panel{
+  position:fixed; bottom:96px; right:32px; z-index:150; width:280px;
+  background:#0c0c0c; border:1px solid var(--line);
+  box-shadow:0 20px 50px rgba(0,0,0,0.55);
+  opacity:0; visibility:hidden; transform:translateY(10px);
+  transition:opacity .3s ease, transform .3s ease, visibility .3s;
+  max-height:70vh; overflow-y:auto;
+}
+.chapters-panel.open{ opacity:1; visibility:visible; transform:translateY(0); }
+.chapters-head{
+  padding:16px 20px; font-size:11px; letter-spacing:.2em; text-transform:uppercase;
+  color:var(--bronze-soft); border-bottom:1px solid var(--line);
+}
+.chapters-link{
+  display:flex; align-items:center; gap:14px; padding:13px 20px;
+  color:rgba(248,244,233,0.75); text-decoration:none; font-size:13px;
+  border-bottom:1px solid rgba(255,255,255,0.05);
+  transition:background .25s, color .25s;
+}
+.chapters-link:last-child{ border-bottom:none; }
+.chapters-link:hover{ background:rgba(217,174,78,0.08); color:var(--cream); }
+.chapters-link .cl-num{ font-family:'Space Grotesk',sans-serif; font-size:11px; color:var(--bronze); flex-shrink:0; width:20px; }
+@media(max-width:600px){
+  .chapters-toggle{ bottom:20px; right:20px; }
+  .chapters-panel{ right:20px; left:20px; width:auto; bottom:84px; }
+}
+
+/* ---------- COOKIE BANNER ---------- */
+.cookie-banner{
+  position:fixed; left:24px; right:24px; bottom:24px; z-index:300; max-width:640px; margin:0 auto;
+  background:#0c0c0c; border:1px solid var(--line);
+  box-shadow:0 20px 50px rgba(0,0,0,0.55);
+  padding:24px 26px; display:flex; flex-wrap:wrap; align-items:center; gap:18px;
+  transform:translateY(140%); opacity:0; transition:transform .5s cubic-bezier(.16,1,.3,1), opacity .5s;
+}
+.cookie-banner.visible{ transform:translateY(0); opacity:1; }
+.cookie-banner p{
+  flex:1 1 320px; margin:0; font-size:13px; line-height:1.6; color:rgba(248,244,233,0.75);
+}
+.cookie-accept{
+  flex-shrink:0; padding:12px 26px; background:var(--bronze); color:var(--ink);
+  border:none; border-radius:999px; font-size:11px; letter-spacing:.12em; text-transform:uppercase;
+  font-weight:600; cursor:pointer; transition:background .3s;
+}
+.cookie-accept:hover{ background:var(--bronze-soft); }
+@media(max-width:600px){ .cookie-banner{ left:14px; right:14px; bottom:14px; padding:20px; } }
