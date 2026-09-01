@@ -476,6 +476,10 @@
 .chapters-link:last-child{ border-bottom:none; }
 .chapters-link:hover{ background:rgba(217,174,78,0.08); color:var(--cream); }
 .chapters-link .cl-num{ font-family:'Space Grotesk',sans-serif; font-size:11px; color:var(--bronze); flex-shrink:0; width:20px; }
+.chapters-group{
+  padding:14px 20px 6px; font-size:10px; letter-spacing:.16em; text-transform:uppercase;
+  color:rgba(248,244,233,0.4); background:rgba(255,255,255,0.02);
+}
 @media(max-width:600px){
   .chapters-toggle{ bottom:20px; right:20px; }
   .chapters-panel{ right:20px; left:20px; width:auto; bottom:84px; }
