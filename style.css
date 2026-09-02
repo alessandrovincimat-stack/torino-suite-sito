@@ -60,7 +60,7 @@
     line-height:0.92; letter-spacing:-0.01em;
     z-index:2;
   }
-  .hero h1 .accent{font-style:italic; font-weight:400; color:var(--bronze);}
+  .hero h1 .accent{font-family:'Cinzel',serif; font-weight:500; font-style:normal; text-transform:uppercase; letter-spacing:.04em; color:var(--bronze); font-size:0.7em;}
   .hero .word{display:inline-block; overflow:hidden; vertical-align:top;}
   .hero .word span{display:inline-block; animation:riseIn 1.1s cubic-bezier(.16,1,.3,1) .2s both;}
 
